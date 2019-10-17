@@ -1,4 +1,6 @@
-baseurl = "https://piluve.github.io/nachodevblog/"
+baseurl = "https://piluve.github.io/nachodevblog"
+publishdir="docs"
+
 title = "Nacho Dev Blog!"
 theme = "hugo-coder"
 languagecode = "en"
@@ -18,7 +20,7 @@ disqusShortname = "yourdiscussshortname"
     info = "Graphics programmer"
     description = "My personal blog! Here you can find stuff about rendering, drones and rockets"
     keywords = "blog,developer,graphics,programming"
-    avatarurl = "images/avatar.jpg"
+    avatarurl = "images/ElNacho.jfif"
 
     favicon_32 = "/img/favicon-32x32.png"
     favicon_16 = "/img/favicon-16x16.png"
