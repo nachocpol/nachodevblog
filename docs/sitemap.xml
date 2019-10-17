@@ -3,26 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/first-post/</loc>
+    <loc>https://piluve.github.io/nachodevblog/posts/first-post/</loc>
     <lastmod>2019-10-17T20:23:30+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://piluve.github.io/nachodevblog/</loc>
     <lastmod>2019-10-17T20:23:30+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/</loc>
+    <loc>https://piluve.github.io/nachodevblog/posts/</loc>
     <lastmod>2019-10-17T20:23:30+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://piluve.github.io/nachodevblog/categories/</loc>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://piluve.github.io/nachodevblog/tags/</loc>
   </url>
   
 </urlset>

@@ -1,4 +1,4 @@
-
+baseurl = "https://piluve.github.io/nachodevblog/"
 publishdir="docs"
 
 title = "Nacho Dev Blog!"
@@ -7,7 +7,7 @@ languagecode = "en"
 defaultcontentlanguage = "en"
 
 paginate = 20
-canonifyurls = false
+canonifyurls = true
 
 pygmentsstyle = "bw"
 pygmentscodefences = true
@@ -22,8 +22,8 @@ disqusShortname = "yourdiscussshortname"
     keywords = "blog,developer,graphics,programming"
     avatarurl = "images/ElNacho.jfif"
 
-    favicon_32 = "/img/favicon-32x32.png"
-    favicon_16 = "/img/favicon-16x16.png"
+    favicon_32 = "img/favicon-32x32.png"
+    favicon_16 = "img/favicon-16x16.png"
 
     footercontent = "Enter a text here."
 
@@ -56,8 +56,8 @@ disqusShortname = "yourdiscussshortname"
 [[menu.main]]
     name = "Blog"
     weight = 1
-    url  = "/posts/"
+    url  = "posts/"
 [[menu.main]]
     name = "About"
     weight = 2
-    url = "/about/"
+    url = "about/"
