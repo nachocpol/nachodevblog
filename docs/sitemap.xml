@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://piluve.github.io/nachodevblog/posts/first-post/</loc>
-    <lastmod>2019-10-17T20:23:30+01:00</lastmod>
+    <loc>https://piluve.github.io/nachodevblog/about/</loc>
+    <lastmod>2019-10-17T21:25:20+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://piluve.github.io/nachodevblog/</loc>
+    <lastmod>2019-10-17T21:25:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://piluve.github.io/nachodevblog/posts/first-post/</loc>
     <lastmod>2019-10-17T20:23:30+01:00</lastmod>
   </url>
   
@@ -18,15 +23,7 @@
   </url>
   
   <url>
-    <loc>https://piluve.github.io/nachodevblog/pages/about/</loc>
-  </url>
-  
-  <url>
     <loc>https://piluve.github.io/nachodevblog/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://piluve.github.io/nachodevblog/pages/</loc>
   </url>
   
   <url>

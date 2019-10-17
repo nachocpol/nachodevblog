@@ -6,10 +6,19 @@
     <description>Recent content on Nacho Dev Blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Oct 2019 20:23:30 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 17 Oct 2019 21:25:20 +0100</lastBuildDate>
     
 	<atom:link href="https://piluve.github.io/nachodevblog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>https://piluve.github.io/nachodevblog/about/</link>
+      <pubDate>Thu, 17 Oct 2019 21:25:20 +0100</pubDate>
+      
+      <guid>https://piluve.github.io/nachodevblog/about/</guid>
+      <description>HI YTOOOOOO!!!!</description>
+    </item>
     
     <item>
       <title>A wild webpage appeared</title>
@@ -19,16 +28,6 @@
       <guid>https://piluve.github.io/nachodevblog/posts/first-post/</guid>
       <description>Welcome! I decided that it was finally time to unify my blog and portfolio in one place. Before, I had Blogger running my blog. On the other hand, I created a simple github page to host my portfolio. Not good. And then HUGO appeared. I noticed this while reading someone else&amp;rsquo;s blog and oh boi. Here we are!
 I have to say that HUGO is quite nice and easy to use.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://piluve.github.io/nachodevblog/pages/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://piluve.github.io/nachodevblog/pages/about/</guid>
-      <description>#About
-\O_O/</description>
     </item>
     
   </channel>
