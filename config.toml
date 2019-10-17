@@ -1,4 +1,4 @@
-baseurl = "https://piluve.github.io/nachodevblog/"
+baseurl = "https://piluve.github.io/nachodevblog"
 publishdir="docs"
 
 title = "Nacho Dev Blog!"
