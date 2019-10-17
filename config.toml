@@ -64,4 +64,4 @@ disqusShortname = "yourdiscussshortname"
 [[menu.main]]
     name = "Resumé"
     weight = 3
-    url = "Resumé.pdf"
+    url = "files/Resumé.pdf"

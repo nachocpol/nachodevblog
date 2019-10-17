@@ -9,3 +9,5 @@ If I had to list my top movies that would be: Gladiator, Interstellar, 2001: spa
 
 
 For more serious stuff, please check out my Resumé.
+
+![:)](images/WopWop.JPG?raw=true "Wop Wop")
