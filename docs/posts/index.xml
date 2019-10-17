@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Nacho Dev Blog!</title>
-    <link>https://piluve.github.io/nachodevblog/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on Nacho Dev Blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 17 Oct 2019 20:23:30 +0100</lastBuildDate>
     
-	<atom:link href="https://piluve.github.io/nachodevblog/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://piluve.github.io/nachodevblog/posts/first-post/</link>
+      <link>/posts/first-post/</link>
       <pubDate>Thu, 17 Oct 2019 20:23:30 +0100</pubDate>
       
-      <guid>https://piluve.github.io/nachodevblog/posts/first-post/</guid>
+      <guid>/posts/first-post/</guid>
       <description></description>
     </item>
     
