@@ -1,5 +1,5 @@
 baseurl = "https://piluve.github.io/nachodevblog/"
-title = "johndoe"
+title = "Nacho Dev Blog!"
 theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
@@ -14,10 +14,10 @@ pygmentscodefencesguesssyntax = true
 disqusShortname = "yourdiscussshortname"
 
 [params]
-    author = "John Doe"
-    info = "Full Stack DevOps and Magician"
-    description = "John Doe's personal website"
-    keywords = "blog,developer,personal"
+    author = "Nacho Cortizo Pol"
+    info = "Graphics programmer"
+    description = "My personal blog! Here you can find stuff about rendering, drones and rockets"
+    keywords = "blog,developer,graphics,programming"
     avatarurl = "images/avatar.jpg"
 
     favicon_32 = "/img/favicon-32x32.png"
