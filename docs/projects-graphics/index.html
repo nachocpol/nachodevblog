@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="author" content="Nacho Cortizo Pol">
-    <meta name="description" content="My personal blog! Here you can find stuff about rendering, drones and rockets">
+    
     <meta name="keywords" content="blog,developer,graphics,programming">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Projects Graphics"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="Demo reel 2016-2017 This video showcases the most important projects I worked on from 2016 to 2017.   Nature rendering Nature scenes are an important part for many videogames. They are huge and detailed scenaries that have the power to inmerse the player in the game. It also comes with other kind of problems like rendering large terrains, realistic skies, undergrow generation and placement. All of this should be done at interactive framerates."/>
 
     <meta property="og:title" content="Projects Graphics" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Demo reel 2016-2017 This video showcases the most important projects I worked on from 2016 to 2017.   Nature rendering Nature scenes are an important part for many videogames. They are huge and detailed scenaries that have the power to inmerse the player in the game. It also comes with other kind of problems like rendering large terrains, realistic skies, undergrow generation and placement. All of this should be done at interactive framerates." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://piluve.github.io/nachodevblog/projects-graphics/" />
 
@@ -101,6 +101,79 @@
     </header>
 
     
+
+<h3 id="demo-reel-2016-2017">Demo reel 2016-2017</h3>
+
+<p style="text-align: justify;">
+This video showcases the most important projects I worked on from 2016 to 2017.
+</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/_Njr7qLtJQQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<h3 id="nature-rendering">Nature rendering</h3>
+
+<p style="text-align: justify;">
+Nature scenes are an important part for many videogames. They are huge and detailed scenaries that have the power to inmerse the player in the game. It also comes with other kind of problems like rendering large terrains, realistic skies, undergrow generation and placement. All of this should be done at interactive framerates. For this project, I wanted to put together diferent elements and optimization techniques using Opengl (selfmade framework). 
+</p>
+
+<p><a href="https://github.com/piluve/Nature">Source(GitHub)</a></p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/Vo7kEmEnR04" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<h3 id="demo-my-sponza">Demo my Sponza</h3>
+
+<p style="text-align: justify;">
+For this project, I had to take a basic framework provided by the university (with window creation and inner loop managment) and render the sponza scene. 
+</p>
+
+<ul style="text-align: justify;">
+<li>
+    <b>Physically based rendering:</b> implemented using Cook-Torrance and custom enviroment mapping.
+</li>
+<li>
+    <b>Shadow mapping:</b> with smooth edges using multiple samples and poisson sampling.
+</li>
+<li>
+    <b>Deferred:</b> a deferred rendering pipeline. As it was my first attemp at deferred, I made it with a full fat G-buffer.
+</li>
+<li>
+    <b>Antialiasing:</b> using a deferred renderer is very powerful but aliasing is a problem. I implemented FXAA to solve this problem.
+</li>
+<li>
+    <b>SSAO:</b> developed using John Chapman's article.
+</li>
+</ul>
+
+<p><a href="https://github.com/piluve/DemoMySponza">Source(GitHub)</a></p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/xDSvOYhCZ0A" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<h3 id="serious-engine-the-r-island">Serious Engine &amp; The R Island</h3>
+
+<p style="text-align: justify;">
+During my three years at ESAT I worked in Serious Engine, a 3D rendering engine made using C++ and OpenGl. Using this engine, I developed a demo scene: "The R Island", on it, you can see water rendering using planar reflections and refractions, procedural mesh placing, instancing, screen space light scatering (god rays), procedural texturing etc.
+</p>
+
+<p><a href="https://github.com/piluve/TheRIsland">Source(GitHub)</a></p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/myyoXAXFSsQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
   </article>
 </section>
 
@@ -110,12 +183,7 @@
       <footer class="footer">
   <section class="container">
     
-      <p>Enter a text here.</p>
-    
      © 2019
-    
-       · 
-      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
     
     
   </section>
