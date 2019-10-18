@@ -31,5 +31,23 @@ If I had to list my top movies that would be: Gladiator, Interstellar, 2001: spa
 I have to say that HUGO is quite nice and easy to use.</description>
     </item>
     
+    <item>
+      <title>Projects</title>
+      <link>https://piluve.github.io/nachodevblog/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piluve.github.io/nachodevblog/projects/</guid>
+      <description> Graphics  </description>
+    </item>
+    
+    <item>
+      <title>Projects Graphics</title>
+      <link>https://piluve.github.io/nachodevblog/projects-graphics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://piluve.github.io/nachodevblog/projects-graphics/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

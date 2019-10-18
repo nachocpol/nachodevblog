@@ -58,10 +58,14 @@ disqusShortname = "nachodevblog"
     weight = 1
     url  = "posts/"
 [[menu.main]]
-    name = "About"
+    name = "Projects"
     weight = 2
+    url = "projects/"
+[[menu.main]]
+    name = "About"
+    weight = 3
     url = "about/"
 [[menu.main]]
     name = "Resumé"
-    weight = 3
+    weight = 4
     url = "files/Resumé.pdf"
