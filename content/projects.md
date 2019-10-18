@@ -2,5 +2,5 @@
 title: "Projects"
 ---
 
-* [Graphics](projects-graphics/projects-graphics.md)
+* [Graphics](projects-graphics/)
 
