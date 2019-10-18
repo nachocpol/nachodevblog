@@ -2,5 +2,5 @@
 title: "Projects"
 ---
 
-* [Graphics](../projects-graphics/)
+* [Graphics](/projects-graphics/)
 
