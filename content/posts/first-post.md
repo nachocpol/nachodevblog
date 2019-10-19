@@ -23,6 +23,7 @@ I have to say that HUGO is quite nice and easy to use. One thing to keep in mind
 And thats it! Web done. See ya!
 
 Anyways, hoppefully I will get things sorted and start posting cool(not that cool) stuff.
+<br>
 Thanks!
 Nacho.
 </p>
