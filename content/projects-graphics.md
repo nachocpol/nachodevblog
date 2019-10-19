@@ -10,7 +10,7 @@ title: "Projects Graphics"
 	My version of a rasterizer implements: perspective correct interpolation, rendering meshes, programable shaders, multi threaded binning and depth buffer.
 </p>
 
-<a target="blank_" href="https://github.com/piluve/NRaster">Source code.</a>.
+<a target="blank_" href="https://github.com/piluve/NRaster">Source code</a>
 
 <img src="../images/raster.jpg"/>
 
@@ -19,7 +19,7 @@ title: "Projects Graphics"
 
 ### Volumetric clouds rendering
 <p style="text-align: justify;">
-	Rendering clouds has always been hard due to the nature of algorithms used to render it: some type of ray-casting. In the past few years companies like Simul Software pushed the realm of volumetric clouds into the games industry. Other companies like Guerrilla Games also implemented real-time cloud rendering systems. I based my research in the knowledge gained working at Simul and also by reading papers from <a target="blank_" href="https://www.guerrilla-games.com/read/the-real-time-volumetric-cloudscapes-of-horizon-zero-dawn">Guerrilla</a> and <a target="blank_" href="http://bitsquid.blogspot.co.uk/2016/07/volumetric-clouds.html">Stingray</a>.
+	Rendering clouds has always been hard due to the nature of algorithms used to render it: some type of ray-casting. In the past few years companies like Simul Software pushed the realm of volumetric clouds into the games industry. Other companies like Guerrilla Games also implemented real-time cloud rendering systems. I based my research in the knowledge gained in similar systems and also by reading papers from <a target="blank_" href="https://www.guerrilla-games.com/read/the-real-time-volumetric-cloudscapes-of-horizon-zero-dawn">Guerrilla</a> and <a target="blank_" href="http://bitsquid.blogspot.co.uk/2016/07/volumetric-clouds.html">Stingray</a>.
 </p>
 <p style="text-align: justify;">
 	I implemented the first (brute force) implementation using Shadertoy, you can check it out <a target="blank_" href="https://www.shadertoy.com/view/MtfBD7">here</a>.

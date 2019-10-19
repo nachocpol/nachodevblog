@@ -46,7 +46,7 @@ I have to say that HUGO is quite nice and easy to use.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://piluve.github.io/nachodevblog/projects-graphics/</guid>
-      <description>2019 Software rasterizer Rasterization is something that as graphics programmer I deal with daily. However, the implementation details are not so obvious and there are plenty optimization techniques. My version of a rasterizer implements: perspective correct interpolation, rendering meshes, programable shaders, multi threaded binning and depth buffer. Source code..
+      <description>2019 Software rasterizer Rasterization is something that as graphics programmer I deal with daily. However, the implementation details are not so obvious and there are plenty optimization techniques. My version of a rasterizer implements: perspective correct interpolation, rendering meshes, programable shaders, multi threaded binning and depth buffer. Source code
 2018 Volumetric clouds rendering Rendering clouds has always been hard due to the nature of algorithms used to render it: some type of ray-casting.</description>
     </item>
     
