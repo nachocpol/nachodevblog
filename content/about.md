@@ -24,4 +24,4 @@ If you want to reach out, you can use any of the methods bellow:
 * **Phone:** (+34)617 28 15 06
 * **E-mail:** nachocpol@gmail.com
 
-![](../images/WopWop.JPG "Wop Wop")
+![](../images/PicosDeEuropaPro.jpg "Wop Wop")
