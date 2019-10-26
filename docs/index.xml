@@ -6,10 +6,19 @@
     <description>Recent content on Nacho Dev Blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Oct 2019 21:25:20 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 26 Oct 2019 11:46:44 +0100</lastBuildDate>
     
 	<atom:link href="http://nachodevblog.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Estes body tubes</title>
+      <link>http://nachodevblog.com/posts/estes-body-tubes/</link>
+      <pubDate>Sat, 26 Oct 2019 11:46:44 +0100</pubDate>
+      
+      <guid>http://nachodevblog.com/posts/estes-body-tubes/</guid>
+      <description>Every time I&#39;m starting a new rocket design, I find myself opening google and looking for the exact dimensions of each estes body tube. I decided to put together the values in a table for easy access. I took this values from the Estes webpage:    Name ID OD Wall Length     BT-5 13.2mm 13.8mm 0.3mm 457mm   BT-20 18mm 18.7mm 0.35mm 457mm   BT-50 24.</description>
+    </item>
     
     <item>
       <title>About</title>

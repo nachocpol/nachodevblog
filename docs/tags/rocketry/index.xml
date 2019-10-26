@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Nacho Dev Blog!</title>
-    <link>http://nachodevblog.com/posts/</link>
-    <description>Recent content in Posts on Nacho Dev Blog!</description>
+    <title>rocketry on Nacho Dev Blog!</title>
+    <link>http://nachodevblog.com/tags/rocketry/</link>
+    <description>Recent content in rocketry on Nacho Dev Blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 26 Oct 2019 11:46:44 +0100</lastBuildDate>
     
-	<atom:link href="http://nachodevblog.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://nachodevblog.com/tags/rocketry/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>http://nachodevblog.com/posts/estes-body-tubes/</guid>
       <description>Every time I&#39;m starting a new rocket design, I find myself opening google and looking for the exact dimensions of each estes body tube. I decided to put together the values in a table for easy access. I took this values from the Estes webpage:    Name ID OD Wall Length     BT-5 13.2mm 13.8mm 0.3mm 457mm   BT-20 18mm 18.7mm 0.35mm 457mm   BT-50 24.</description>
-    </item>
-    
-    <item>
-      <title>A wild webpage appeared</title>
-      <link>http://nachodevblog.com/posts/first-post/</link>
-      <pubDate>Thu, 17 Oct 2019 20:23:30 +0100</pubDate>
-      
-      <guid>http://nachodevblog.com/posts/first-post/</guid>
-      <description>Welcome! I decided that it was finally time to unify my blog and portfolio in one place. Before, I had Blogger running my blog. On the other hand, I created a simple github page to host my portfolio. Not good. And then HUGO appeared. I noticed this while reading someone else&#39;s blog and oh boi. Here we are! I have to say that HUGO is quite nice and easy to use.</description>
     </item>
     
   </channel>

@@ -3,22 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nachodevblog.com/posts/estes-body-tubes/</loc>
+    <lastmod>2019-10-26T11:46:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nachodevblog.com/</loc>
+    <lastmod>2019-10-26T11:46:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nachodevblog.com/posts/</loc>
+    <lastmod>2019-10-26T11:46:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nachodevblog.com/tags/rocketry/</loc>
+    <lastmod>2019-10-26T11:46:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nachodevblog.com/tags/</loc>
+    <lastmod>2019-10-26T11:46:44+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nachodevblog.com/about/</loc>
     <lastmod>2019-10-17T21:25:20+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://nachodevblog.com/</loc>
-    <lastmod>2019-10-17T21:25:20+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://nachodevblog.com/posts/first-post/</loc>
-    <lastmod>2019-10-17T20:23:30+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://nachodevblog.com/posts/</loc>
     <lastmod>2019-10-17T20:23:30+01:00</lastmod>
   </url>
   
@@ -32,10 +47,6 @@
   
   <url>
     <loc>http://nachodevblog.com/projects-graphics/</loc>
-  </url>
-  
-  <url>
-    <loc>http://nachodevblog.com/tags/</loc>
   </url>
   
 </urlset>
