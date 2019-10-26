@@ -30,7 +30,7 @@ Every time I'm starting a new rocket design, I find myself opening google and lo
 
 ### Motors
 
-| Power  	| Diamter 	| Length 	|
+| Power  	| Diameter 	| Length 	|
 |--------	|---------	|--------	|
 | 1/4A-A 	| 13mm    	| 45mm   	|
 | 1/2A-C 	| 18mm    	| 70mm   	|
