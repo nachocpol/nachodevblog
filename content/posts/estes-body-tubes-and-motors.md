@@ -1,6 +1,6 @@
 +++ 
 date = 2019-10-26T11:46:44+01:00
-title = "Estes body tubes"
+title = "Estes body tubes and motors"
 description = ""
 slug = "" 
 tags = ["rocketry"]
@@ -10,8 +10,10 @@ series = []
 +++
 
 {{%format/text-align-justify%}}
-Every time I'm starting a new rocket design, I find myself opening google and looking for the exact dimensions of each estes body tube. I decided to put together the values in a table for easy access. I took this values from the Estes webpage:
+Every time I'm starting a new rocket design, I find myself opening google and looking for the exact dimensions of each estes body tube and the motors. I decided to put together that information in tables for easy access. I gathered all the values from the Estes webpage.
 {{%format/text-align-justify%}}
+
+### Body Tubes
 
 | Name  	| ID      	| OD      	| Wall   	| Length 	|
 |-------	|---------	|---------	|--------	|--------	|
@@ -25,3 +27,13 @@ Every time I'm starting a new rocket design, I find myself opening google and lo
 **ID:** Inside Diameter
 
 **OD:** Outside Diameter
+
+### Motors
+
+| Power  	| Diamter 	| Length 	|
+|--------	|---------	|--------	|
+| 1/4A-A 	| 13mm    	| 45mm   	|
+| 1/2A-C 	| 18mm    	| 70mm   	|
+| C-D    	| 24mm    	| 70mm   	|
+| E      	| 24mm    	| 95mm   	|
+| E-F    	| 29mm    	| 114mm  	|
