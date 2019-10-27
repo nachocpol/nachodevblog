@@ -6,19 +6,10 @@
     <description>Recent content in Posts on Nacho Dev Blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 26 Oct 2019 20:10:57 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 26 Oct 2019 11:46:44 +0100</lastBuildDate>
     
 	<atom:link href="http://nachodevblog.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Haack Series nose generator</title>
-      <link>http://nachodevblog.com/posts/haack-series-nose-generator/</link>
-      <pubDate>Sat, 26 Oct 2019 20:10:57 +0100</pubDate>
-      
-      <guid>http://nachodevblog.com/posts/haack-series-nose-generator/</guid>
-      <description>As a rocket designer, there are many nose cone types to choose from. For low to mid power rocketry, the choice can be based more on looks than anything else. Rockets reaching transonic and supersonic speeds should definetly make a fact based decission. For my next build I want to use a Haack nose cone, because I will be 3D printing it, I need a way of generating a 3D mesh.</description>
-    </item>
     
     <item>
       <title>Estes body tubes and motors</title>
@@ -27,25 +18,6 @@
       
       <guid>http://nachodevblog.com/posts/estes-body-tubes-and-motors/</guid>
       <description>Every time I&#39;m starting a new rocket design, I find myself opening google and looking for the exact dimensions of each estes body tube and the motors. I decided to put together that information in tables for easy access. I gathered all the values from the Estes webpage. Body Tubes    Name ID OD Wall Length     BT-5 13.2mm 13.8mm 0.3mm 457mm   BT-20 18mm 18.</description>
-    </item>
-    
-    <item>
-      <title>One step forward</title>
-      <link>http://nachodevblog.com/posts/rocketry_upgrade/</link>
-      <pubDate>Tue, 22 Oct 2019 20:15:45 +0100</pubDate>
-      
-      <guid>http://nachodevblog.com/posts/rocketry_upgrade/</guid>
-      <description>Until this point, I have been launching model rockets using BP Estes motor packs. For those who don&#39;t know, in rocketry there are two principal types of motors:  Black Powder(BP): most common motors for low-mid rocketry. Propellant is black powder pellets, specific impulse of 80s. Single use. Ammonium perchlorate(AP): used in high power rocketry, can be either single use or reloadable. Specific impulse above 180s.   Specific impulse is a value that tells us how efficient a fuel is.</description>
-    </item>
-    
-    <item>
-      <title>Road to L1 - Beginnings</title>
-      <link>http://nachodevblog.com/posts/preparing-l1/</link>
-      <pubDate>Mon, 21 Oct 2019 19:00:26 +0100</pubDate>
-      
-      <guid>http://nachodevblog.com/posts/preparing-l1/</guid>
-      <description>L1 Certification This is the first certification level required for using motors above H up to I (btw 160N/s and 640N/s). To succed you need:
- Stable flight Events should happen as described previous to fligh No parts can fly off the rocket! Rocket must survive the landing, minor scratches are permited. Exceptions due to landing on hard surfaces.  Also, I must pass with at least 90% a multi-choice exam.</description>
     </item>
     
     <item>

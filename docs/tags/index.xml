@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Nacho Dev Blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 26 Oct 2019 20:10:57 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 26 Oct 2019 11:46:44 +0100</lastBuildDate>
     
 	<atom:link href="http://nachodevblog.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,18 +14,9 @@
     <item>
       <title>rocketry</title>
       <link>http://nachodevblog.com/tags/rocketry/</link>
-      <pubDate>Sat, 26 Oct 2019 20:10:57 +0100</pubDate>
+      <pubDate>Sat, 26 Oct 2019 11:46:44 +0100</pubDate>
       
       <guid>http://nachodevblog.com/tags/rocketry/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>build</title>
-      <link>http://nachodevblog.com/tags/build/</link>
-      <pubDate>Tue, 22 Oct 2019 20:15:45 +0100</pubDate>
-      
-      <guid>http://nachodevblog.com/tags/build/</guid>
       <description></description>
     </item>
     
