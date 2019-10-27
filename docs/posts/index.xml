@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Nacho Dev Blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 26 Oct 2019 11:46:44 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 26 Oct 2019 20:10:57 +0100</lastBuildDate>
     
 	<atom:link href="http://nachodevblog.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Haack Series nose generator</title>
+      <link>http://nachodevblog.com/posts/haack-series-nose-generator/</link>
+      <pubDate>Sat, 26 Oct 2019 20:10:57 +0100</pubDate>
+      
+      <guid>http://nachodevblog.com/posts/haack-series-nose-generator/</guid>
+      <description>As a rocket designer, there are many nose cone types to choose from. For low to mid power rocketry, the choice can be based more on looks than anything else. Rockets reaching transonic and supersonic speeds should definetly make a fact based decission. For my next build I want to use a Haack nose cone, because I will be 3D printing it, I need a way of generating a 3D mesh.</description>
+    </item>
     
     <item>
       <title>Estes body tubes and motors</title>
