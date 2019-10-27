@@ -10,11 +10,13 @@ externalLink = ""
 series = []
 +++
 
-{{%format/text-align-justify%}}
+{{< format/text-align-justify >}}
 As a rocket designer, there are many nose cone types to choose from. For low to mid power rocketry, the choice can be based more on looks than anything else. Rockets reaching transonic and supersonic speeds should definetly make a fact based decission. For my next build I want to use a Haack nose cone, because I will be 3D printing it, I need a way of generating a 3D mesh. In this first post, I will explore how to generate a Haack profile. 
-{{%format/text-align-justify%}}
+{{</ format/text-align-justify >}}
 ### Haack Series
-As oposed to other nose cones, Haack series do not represent a geometric figure, but they are created following a formula that tries to minimize drag. As input to this formula, one provides the nose radius, lenght and a *haack parameter*. In the visualization bellow, I am clamping this value in the range 0-0.66. This parameter values have special meanings:
+{{< format/text-align-justify >}}
+As oposed to other nose cones, Haack series do not represent a geometric figure, but they are created following a formula that tries to minimize drag. As input to this formula, one provides the nose radius, lenght and a <i>haack parameter</i>. In the visualization bellow, I am clamping this value in the range 0-0.66. This parameter values have special meanings:
+{{</ format/text-align-justify >}}
 
 *	**0:** LD-Haack (Von Kármán), minimun drag for the length and diameter given.
 *	**0.33:** LV- Haack, minimum drag for length and volume.
@@ -123,5 +125,6 @@ I created this visualization using threeJS. You can tweak the Haack parameter!
 </script>
 </div>
 
-
+{{< format/text-align-justify >}}
 Hope this was useful, in the next post I want to create a tool that will allow me to create the nose cone in 3D after setting a few parameters and then exporting the results as a 3D mesh.
+{{</ format/text-align-justify >}}
