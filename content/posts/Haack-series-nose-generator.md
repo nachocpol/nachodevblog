@@ -22,7 +22,7 @@ As oposed to other nose cones, Haack series do not represent a geometric figure,
 
 The formula used to compute the nose looks like this:
 
-![](../images/Haack/haack-formula.svg "Formula")
+![](../../images/Haack/haack-formula.svg "Formula")
 *Source: https://en.wikipedia.org/wiki/Nose_cone_design#Haack_series*
 
 
