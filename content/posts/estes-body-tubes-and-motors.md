@@ -9,9 +9,9 @@ externalLink = ""
 series = []
 +++
 
-{{%format/text-align-justify%}}
+{{< format/text-align-justify >}}
 Every time I'm starting a new rocket design, I find myself opening google and looking for the exact dimensions of each estes body tube and the motors. I decided to put together that information in tables for easy access. I gathered all the values from the Estes webpage.
-{{%format/text-align-justify%}}
+{{</ format/text-align-justify >}}
 
 ### Body Tubes
 
