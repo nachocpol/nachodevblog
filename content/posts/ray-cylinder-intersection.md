@@ -131,8 +131,8 @@ $ P' = P + \hat{RD} \cdot D$
 		camera.position.y = 2;
 		camera.position.x = 5;
 		camera.lookAt(0,0,0);
-
-		var controls = new THREE.OrbitControls( camera, renderer.domElement );
+		var camControls = new THREE.OrbitControls(camera, renderer.domElement);
+		camControls.enablePan = false;
 
 		// Helpers
 		var axisHelper = new THREE.AxesHelper(2);
@@ -152,10 +152,85 @@ $ P' = P + \hat{RD} \cdot D$
 		scene.add(cylinder);
 
 		// Light
-		var sun = new THREE.DirectionalLight(0xffffff,1);
+		var sun = new THREE.DirectionalLight(0xffffff,0.5);
 		scene.add(sun);
 		sun.position.x = 2;
 		sun.position.z = 2;
+
+		var light = new THREE.AmbientLight( 0x202020 );
+		scene.add( light );
+
+		drawIntersection(
+			new THREE.Vector3(0.3,1,3),
+			new THREE.Vector3(-0.3,-0.8,-1),
+			cylinderRadius,
+			cylinderHeight
+		);
+	}
+
+	function drawIntersection(P, RD, Radius, Height)
+	{
+		RD.normalize();
+		var arrow = new THREE.ArrowHelper(RD,P,1,0x00ffff);
+		scene.add(arrow);
+
+		// FIX1: we need to make this direction flat in y!!!
+		var RD2D = new THREE.Vector3();
+		RD2D.copy(RD);
+		RD2D.y = 0;
+		RD2D.normalize();
+
+		var C = new THREE.Vector3(0,P.y,0);
+		var CP = new THREE.Vector3();
+		CP.subVectors(C,P);
+
+		var CPLen = CP.length();
+		var TP = CP.dot(RD2D);
+		var TC = Math.sqrt(CPLen*CPLen - TP*TP);
+
+		var TI = Math.sqrt(Math.max(Radius*Radius - TC*TC, 0));		
+		var IP = TP - TI;
+
+		// Debug 2D tests:
+		if(false)
+		{
+			var debugRay = new THREE.ArrowHelper(RD2D,P,IP,0xff0000);
+			scene.add(debugRay);
+
+			var Ipo = new THREE.Vector3();
+			Ipo.copy(P);
+			Ipo.addScaledVector(RD2D,IP);
+			console.log(Ipo);
+			console.log(Math.sqrt(Ipo.x*Ipo.x + Ipo.z*Ipo.z));
+		}
+
+		var CPnorm = new THREE.Vector3();
+		CPnorm.copy(CP);
+		CPnorm.normalize();
+		var cosB = RD.dot(CPnorm);
+		var PpP = IP / cosB;
+
+		var interArrow = new THREE.ArrowHelper(RD,P,PpP,0x00ff00);
+		scene.add(interArrow);
+
+		// Debug final point
+		if(true)
+		{
+			var Pinter = new THREE.Vector3();
+			Pinter.copy(P);
+			Pinter.addScaledVector(RD,PpP);
+			console.log(Math.sqrt(Pinter.x*Pinter.x + Pinter.z*Pinter.z));
+		}
+
+		/*
+		console.log(C);
+		console.log(CP);
+		console.log(TP);
+		console.log(TC);
+		console.log(TI);
+		console.log(cosB);
+		console.log(PpP);
+		*/
 	}
 
 	function render()
