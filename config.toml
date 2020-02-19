@@ -1,4 +1,4 @@
-baseurl = "http://nachodevblog.com/"
+baseurl = "https://nachodevblog.com/"
 publishdir="docs"
 
 title = "Nacho Dev Blog!"

@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Nacho Dev Blog!</title>
-    <link>http://nachodevblog.com/posts/</link>
+    <link>https://nachodevblog.com/posts/</link>
     <description>Recent content in Posts on Nacho Dev Blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 19 Feb 2020 20:57:45 +0000</lastBuildDate>
     
-	<atom:link href="http://nachodevblog.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nachodevblog.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ray-Cylinder intersection</title>
-      <link>http://nachodevblog.com/posts/ray-cylinder-intersection/</link>
+      <link>https://nachodevblog.com/posts/ray-cylinder-intersection/</link>
       <pubDate>Wed, 19 Feb 2020 20:57:45 +0000</pubDate>
       
-      <guid>http://nachodevblog.com/posts/ray-cylinder-intersection/</guid>
+      <guid>https://nachodevblog.com/posts/ray-cylinder-intersection/</guid>
       <description>For a given cylinder with radius $R$ and height $H$, a ray with origin $P$ and direction $RD$, find the first intersection point $P&#39;$ between the ray and the cylinder.First, I will simplify the problem by flatening the ray (so effectively this becomes a 2D problem). You can understand this as trying to figure out the intersection point between the ray and a slice of the cylinder.$C$ is the slice center: $(Cylinder_x, P_y, Cylinder_z)$</description>
     </item>
     
     <item>
       <title>Haack Series nose generator</title>
-      <link>http://nachodevblog.com/posts/haack-series-nose-generator/</link>
+      <link>https://nachodevblog.com/posts/haack-series-nose-generator/</link>
       <pubDate>Sat, 26 Oct 2019 20:10:57 +0100</pubDate>
       
-      <guid>http://nachodevblog.com/posts/haack-series-nose-generator/</guid>
+      <guid>https://nachodevblog.com/posts/haack-series-nose-generator/</guid>
       <description>As a rocket designer, there are many nose cone types to choose from. For low to mid power rocketry, the choice can be based more on looks than anything else. Rockets reaching transonic and supersonic speeds should definetly make a fact based decission. For my next build I want to use a Haack nose cone, because I will be 3D printing it, I need a way of generating a 3D mesh.</description>
     </item>
     
     <item>
       <title>Estes body tubes and motors</title>
-      <link>http://nachodevblog.com/posts/estes-body-tubes-and-motors/</link>
+      <link>https://nachodevblog.com/posts/estes-body-tubes-and-motors/</link>
       <pubDate>Sat, 26 Oct 2019 11:46:44 +0100</pubDate>
       
-      <guid>http://nachodevblog.com/posts/estes-body-tubes-and-motors/</guid>
+      <guid>https://nachodevblog.com/posts/estes-body-tubes-and-motors/</guid>
       <description>Every time I&#39;m starting a new rocket design, I find myself opening google and looking for the exact dimensions of each estes body tube and the motors. I decided to put together that information in tables for easy access. I gathered all the values from the Estes webpage.Body Tubes    Name ID OD Wall Length     BT-5 13.2mm 13.8mm 0.3mm 457mm   BT-20 18mm 18.</description>
     </item>
     
     <item>
       <title>A wild webpage appeared</title>
-      <link>http://nachodevblog.com/posts/first-post/</link>
+      <link>https://nachodevblog.com/posts/first-post/</link>
       <pubDate>Thu, 17 Oct 2019 20:23:30 +0100</pubDate>
       
-      <guid>http://nachodevblog.com/posts/first-post/</guid>
+      <guid>https://nachodevblog.com/posts/first-post/</guid>
       <description>Welcome! I decided that it was finally time to unify my blog and portfolio in one place. Before, I had Blogger running my blog. On the other hand, I created a simple github page to host my portfolio. Not good. And then HUGO appeared. I noticed this while reading someone else&#39;s blog and oh boi. Here we are! I have to say that HUGO is quite nice and easy to use.</description>
     </item>
     
