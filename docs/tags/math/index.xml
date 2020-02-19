@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>math on Nacho Dev Blog!</title>
+    <link>http://nachodevblog.com/tags/math/</link>
+    <description>Recent content in math on Nacho Dev Blog!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 19 Feb 2020 20:57:45 +0000</lastBuildDate>
+    
+	<atom:link href="http://nachodevblog.com/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ray-Cylinder intersection</title>
+      <link>http://nachodevblog.com/posts/ray-cylinder-intersection/</link>
+      <pubDate>Wed, 19 Feb 2020 20:57:45 +0000</pubDate>
+      
+      <guid>http://nachodevblog.com/posts/ray-cylinder-intersection/</guid>
+      <description>For a given cylinder with radius $R$ and height $H$, a ray with origin $P$ and direction $RD$, find the first intersection point $P&#39;$ between the ray and the cylinder.First, I will simplify the problem by flatening the ray (so effectively this becomes a 2D problem). You can understand this as trying to figure out the intersection point between the ray and a slice of the cylinder.$C$ is the slice center: $(Cylinder_x, P_y, Cylinder_z)$</description>
+    </item>
+    
+  </channel>
+</rss>

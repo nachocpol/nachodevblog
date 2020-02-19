@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Nacho Cortizo Pol">
+    
+    <meta name="keywords" content="blog,developer,graphics,programming">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ray-Cylinder intersection"/>
+<meta name="twitter:description" content="For a given cylinder with radius $R$ and height $H$, a ray with origin $P$ and direction $RD$, find the first intersection point $P&#39;$ between the ray and the cylinder.First, I will simplify the problem by flatening the ray (so effectively this becomes a 2D problem). You can understand this as trying to figure out the intersection point between the ray and a slice of the cylinder.$C$ is the slice center: $(Cylinder_x, P_y, Cylinder_z)$"/>
+
+    <meta property="og:title" content="Ray-Cylinder intersection" />
+<meta property="og:description" content="For a given cylinder with radius $R$ and height $H$, a ray with origin $P$ and direction $RD$, find the first intersection point $P&#39;$ between the ray and the cylinder.First, I will simplify the problem by flatening the ray (so effectively this becomes a 2D problem). You can understand this as trying to figure out the intersection point between the ray and a slice of the cylinder.$C$ is the slice center: $(Cylinder_x, P_y, Cylinder_z)$" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://nachodevblog.com/posts/ray-cylinder-intersection/" />
+<meta property="article:published_time" content="2020-02-19T20:57:45+00:00" />
+<meta property="article:modified_time" content="2020-02-19T20:57:45+00:00" />
+
+
+    
+      <base href="http://nachodevblog.com/posts/ray-cylinder-intersection/">
+    
+    <title>
+  Ray-Cylinder intersection · Nacho Dev Blog!
+</title>
+
+    
+      <link rel="canonical" href="http://nachodevblog.com/posts/ray-cylinder-intersection/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://nachodevblog.com/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="http://nachodevblog.com/css/custom.css" />
+    
+
+    
+    
+    <link rel="icon" type="image/png" href="http://nachodevblog.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://nachodevblog.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.58.3" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://nachodevblog.com/">
+      Nacho Dev Blog!
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://nachodevblog.com/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://nachodevblog.com/projects/">Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://nachodevblog.com/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://nachodevblog.com/files/Resum%C3%A9.pdf">Resumé</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Ray-Cylinder intersection</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-02-19T20:57:45Z'>
+                February 19, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              5 minutes read
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="http://nachodevblog.com/tags/math/">math</a>
+      <span class="separator">•</span>
+    <a href="http://nachodevblog.com/tags/algebra/">algebra</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+
+<p style="text-align: justify;">
+	
+For a given cylinder with radius $R$ and height $H$, a ray with origin $P$ and direction $RD$, find the first intersection point $P'$ between the ray and the cylinder.
+
+</p>
+
+<p><img src="../../images/RayVSCylinder/fig1.png" alt="" title="Figure 1" /></p>
+
+<p style="text-align: justify;">
+	
+First, I will simplify the problem by flatening the ray (so effectively this becomes a 2D problem). You can understand this as trying to figure out the intersection point between the ray and a slice of the cylinder.
+
+</p>
+
+<p><img src="../../images/RayVSCylinder/fig2.png" alt="" title="Figure 2" /></p>
+
+<p>$C$ is the slice center: $(Cylinder_x, P_y, Cylinder_z)$</p>
+
+<p>$R$ is the radius of the cylinder.</p>
+
+<p>$I$ is the intersection with this slice.</p>
+
+<p>$\alpha$ is the angle between $RD$ and $CP$.</p>
+
+<p>$T$ is a special point that makes the right triangles $TCP$ and $TCI$.</p>
+
+<p style="text-align: justify;">
+	
+Finding the length of $PI$ will give us the point I ($I=P+\hat{RD}\cdot||PI||$). However, we don't know that distance yet! Note that $||IP|| = ||TP|| - ||TI||$, so if we can figure out this two lengths, we can solve point $I$!
+First I want to find $||TC||$ as this is a common side of the two right triangles: $TCP$ and $TCI$. There are two methods of figuring it out:
+
+</p>
+
+<p><em>Method A:</em></p>
+
+<p>$RD_f = (RD_x,0,RD_z)$</p>
+
+<p>$c = \hat{RD_f} \cdot \hat{CP}$</p>
+
+<p>$\alpha = \arccos c$</p>
+
+<p>$\sin \alpha = \frac{||TC||}{||CP||}$</p>
+
+<p>$||TC|| = \sin \alpha \cdot ||CP||$</p>
+
+<p><em>Method B:</em></p>
+
+<p>$||TP|| = CP \cdot \hat{RD_f}$</p>
+
+<p>$||CP||^2 = ||TC||^2 + ||TP||^2$</p>
+
+<p>$||TC|| = \sqrt{||CP||^2 - ||TP||^2}$</p>
+
+<p style="text-align: justify;">
+	
+Method A is quite simple to understand, we just use simple trig to find the angle and then resolve for $||TC||$. Method B takes advantage of vector projection to figure out $||TP||$ and then we solve for $||TC||$ with the pythagoras theorem. I will use Method B as we will re-use $||TP||$. Finally to get $||TI||$ we can do:
+
+</p>
+
+<p>$R^2 = ||TC||^2 + ||TI||^2$</p>
+
+<p>$||TI|| = \sqrt{R^2 - ||TC||^2}$</p>
+
+<p>With this information, we can go back to the original representation of the problem:</p>
+
+<p><img src="../../images/RayVSCylinder/fig3.png" alt="" title="Figure 3" /></p>
+
+<p>We can represent the distance $||P&rsquo;P||$ as:</p>
+
+<p>$||IP|| = ||TP|| - ||TI||$</p>
+
+<p>$\cos \beta == \hat{RD} \cdot \hat{CP}$</p>
+
+<p>$\cos \beta = \frac{||IP||}{||P&rsquo;P||}$</p>
+
+<p>$||P&rsquo;P|| = \frac{||IP||}{\cos \beta}$</p>
+
+<p>$P&rsquo; = P + \hat{RD} \cdot ||P&rsquo;P||$</p>
+
+<p>And there we have it! An intersection point&hellip; Not really. Before wrapping this up we need to check for rays missing the cylinder and also take into account the cylinder caps. The first thing to note is that all of this must be done in cylinder local space (or some assumptions won&rsquo;t work). We can start by discarding rays when $||TC|| &gt; R$.</p>
+
+<p>Before checking for the cylinder height, we are going to limit the ray direction y to be positve:</p>
+
+<p><img src="../../images/RayVSCylinder/fig4.png" alt="" title="Figure 4" /></p>
+
+<p>$|{P&rsquo;}_y| &gt; \frac{H}{2}$</p>
+
+<p>$ A = |P_y| - \frac{H}{2}$</p>
+
+<p>$Y_d = (0,-1,0)  RD_y   \leqslant 0$</p>
+
+<p>$Y_d = (0,1,0)  RD_y    &gt; 0$</p>
+
+<p>$ \cos \omega = \hat{RD} \cdot Y_d$</p>
+
+<p>$ \cos \omega = \frac{H}{D}$</p>
+
+<p>$ D = \frac{H}{\cos \omega}$</p>
+
+<p>$ P&rsquo; = P + \hat{RD} \cdot D$</p>
+
+<p>Finally, we need to check that $P&rsquo;$ is within the cap:</p>
+
+<p>$\sqrt{{P&rsquo;}_x^2 + {P&rsquo;}_z^2} &gt; R \Rightarrow discard.$</p>
+
+<p>And now we have an intersection point that takes into account the caps. I implemented the intersection code bellow using three.js:</p>
+
+<div id="threeCanvas" style ="background-color:#FFF; width:720; height:480px; margin:0 auto;">
+<script src="http://nachodevblog.com/js/three.js"></script>
+<script src="http://nachodevblog.com/js/OrbitControls.js"></script>
+<script>
+    var container = document.getElementById("threeCanvas");
+    var width = container.offsetWidth;
+    var height = container.offsetHeight;
+
+    var renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize( width, height );
+    container.appendChild( renderer.domElement );
+
+    var scene = null;
+    var camera = null;
+
+    init();
+    render();
+
+    //----------------------------
+    
+    function init()
+    {
+        scene = new THREE.Scene();
+
+        // Camera setup
+        camera = new THREE.PerspectiveCamera(70,width/height,0.1,1000);
+        camera.position.z = 0;
+        camera.position.y = 2;
+        camera.position.x = 5;
+        camera.lookAt(0,0,0);
+        var camControls = new THREE.OrbitControls(camera, renderer.domElement);
+        camControls.enablePan = false;
+
+        // Helpers
+        var axisHelper = new THREE.AxesHelper(5);
+        axisHelper.position.y = 0.005;
+        scene.add(axisHelper);
+        var gridHelper = new THREE.GridHelper(10,16,0xf0f0f0,0x606060);
+        scene.add(gridHelper);
+
+        // Materials
+        var solidMaterial = new THREE.MeshBasicMaterial({color:0xffffff});
+        var lambertMaterial = new THREE.MeshLambertMaterial({color : 0xffffff});
+
+        // Cylinder
+        var cylinderRadius = 1.0;
+        var cylinderHeight = 3.0;
+        var cylinderGeometry = new THREE.CylinderGeometry(cylinderRadius, cylinderRadius ,cylinderHeight, 32);
+        var cylinder = new THREE.Mesh(cylinderGeometry, lambertMaterial);
+        scene.add(cylinder);
+
+        // Light
+        var sun = new THREE.DirectionalLight(0xffffff,0.5);
+        scene.add(sun);
+        sun.position.x = 2;
+        sun.position.z = 2;
+
+        var light = new THREE.AmbientLight( 0x202020 );
+        scene.add( light );
+
+        
+        drawIntersection(
+            new THREE.Vector3(0.3,3,2),
+            new THREE.Vector3(-0.3,-0.8,-1),
+            cylinderRadius,
+            cylinderHeight
+        );
+
+        drawIntersection(
+            new THREE.Vector3(0.3,1.5,3),
+            new THREE.Vector3(0.2,-0.8,-1),
+            cylinderRadius,
+            cylinderHeight
+        );
+
+        drawIntersection(
+            new THREE.Vector3(0,-2,-3),
+            new THREE.Vector3(0.2,0.8,1),
+            cylinderRadius,
+            cylinderHeight
+        );
+
+        drawIntersection(
+            new THREE.Vector3(2,-2.5,0),
+            new THREE.Vector3(-1,0.7,0),
+            cylinderRadius,
+            cylinderHeight
+        );
+
+        drawIntersection(
+            new THREE.Vector3(-2.5,0.5,0.2),
+            new THREE.Vector3(1,0.4,0),
+            cylinderRadius,
+            cylinderHeight
+        );
+    }
+
+    function drawIntersection(P, RD, Radius, Height)
+    {
+        RD.normalize();
+        var arrow = new THREE.ArrowHelper(RD,P,1,0x00ffff);
+        scene.add(arrow);
+
+        var RD2D = new THREE.Vector3();
+        RD2D.copy(RD);
+        RD2D.y = 0;
+        RD2D.normalize();
+
+        var C = new THREE.Vector3(0,P.y,0);
+        var CP = new THREE.Vector3();
+        CP.subVectors(C,P);
+
+        var CPLen = CP.length();
+        var TP = CP.dot(RD2D);
+        var TC = Math.sqrt(CPLen*CPLen - TP*TP);
+
+        // Discard ray.
+        if(TC > Radius)
+        {
+            return;
+        }
+
+        var TI = Math.sqrt(Math.max(Radius*Radius - TC*TC, 0));
+        var IP = TP - TI;
+
+        // Debug 2D tests:
+        if(false)
+        {
+            var debugRay = new THREE.ArrowHelper(RD2D,P,IP,0xff0000);
+            scene.add(debugRay);
+
+            var Ipo = new THREE.Vector3();
+            Ipo.copy(P);
+            Ipo.addScaledVector(RD2D,IP);
+            console.log(Ipo);
+            console.log(Math.sqrt(Ipo.x*Ipo.x + Ipo.z*Ipo.z));
+        }
+
+        var CPnorm = new THREE.Vector3();
+        CPnorm.copy(CP);
+        CPnorm.normalize();
+        var cosB = RD.dot(CPnorm);
+        var PpP = IP / cosB;
+
+        var Pinter = new THREE.Vector3();
+        Pinter.copy(P);
+        Pinter.addScaledVector(RD,PpP);
+        
+        // Finally, we need to check for the cylinder height:
+        Pinter.y = Math.abs(Pinter.y); // Flip point y
+
+        var halfCylinderHeight = Height * 0.5;
+        if(Pinter.y > halfCylinderHeight)
+        {
+            // Check if we hit the cylinder cap:
+            var YDir = new THREE.Vector3(0,-1,0);
+            if(RD.y > 0)
+            {
+                YDir = new THREE.Vector3(0,1,0);
+            }
+            var H = Math.abs(P.y) - halfCylinderHeight; // Flip y!
+            var cosw = RD.dot(YDir);
+            var D = H / cosw;
+
+            var Pcap = new THREE.Vector3();
+            Pcap.copy(P); // we now copy the original point
+            Pcap.addScaledVector(RD,D);// Also use original dir
+            var rad = Math.sqrt(Pcap.x*Pcap.x + Pcap.z*Pcap.z);
+            if(rad > Radius)
+            {
+                // Discard, ray misses the cap
+                return;
+            }
+                
+            var interArrow = new THREE.ArrowHelper(RD,P,D,0x00ff00);
+            scene.add(interArrow);
+        }
+        else
+        {
+            var interArrow = new THREE.ArrowHelper(RD,P,PpP,0x00ff00);
+            scene.add(interArrow);
+        }
+
+        /*
+        console.log(C);
+        console.log(CP);
+        console.log(TP);
+        console.log(TC);
+        console.log(TI);
+        console.log(cosB);
+        console.log(PpP);
+        */
+    }
+
+    function render()
+    {
+        requestAnimationFrame(render);
+        renderer.render( scene, camera );
+    }
+</script>
+</div>
+
+<h2 id="appendix">Appendix:</h2>
+
+<p>In this implementation I&rsquo;m not taking into account rays starting inside the cylinder. Also, this could be extended to provide the second intersection point.</p>
+
+      </div>
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nachodevblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+     © 2020 nachocpol@gmail.com 
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

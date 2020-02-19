@@ -1,6 +1,6 @@
 +++ 
-draft = true
-date = 2020-02-15T20:57:45Z
+draft = false
+date = 2020-02-19T20:57:45Z
 title = "Ray-Cylinder intersection"
 description = ""
 slug = "" 
@@ -8,7 +8,7 @@ tags = ["math","algebra"]
 +++
 
 {{< format/text-align-justify >}}
-For a given cylinder with radius $R$ and height $H$, a ray with origin $P$ and direction $RD$, find the first intersection point $P'$ between the ray and the cylinder:
+For a given cylinder with radius $R$ and height $H$, a ray with origin $P$ and direction $RD$, find the first intersection point $P'$ between the ray and the cylinder.
 {{</ format/text-align-justify >}}
 
 ![](../../images/RayVSCylinder/fig1.png "Figure 1")
@@ -30,13 +30,15 @@ $\alpha$ is the angle between $RD$ and $CP$.
 $T$ is a special point that makes the right triangles $TCP$ and $TCI$.
 
 {{< format/text-align-justify >}}
-Finding the length of $PI$ will give us the point I ($I=P+\hat{RD}\cdot||PI||$). However, we don't know that distance yet! Note that $||IP|| = ||TP|| - ||TI||$, so if we can figure out this two lenghts, we can solve point $I$!
+Finding the length of $PI$ will give us the point I ($I=P+\hat{RD}\cdot||PI||$). However, we don't know that distance yet! Note that $||IP|| = ||TP|| - ||TI||$, so if we can figure out this two lengths, we can solve point $I$!
 First I want to find $||TC||$ as this is a common side of the two right triangles: $TCP$ and $TCI$. There are two methods of figuring it out:
 {{</ format/text-align-justify >}}
 
 *Method A:*
 
-$c = \hat{RD} \cdot \hat{CP}$
+$RD_f = (RD_x,0,RD_z)$
+
+$c = \hat{RD_f} \cdot \hat{CP}$
 
 $\alpha = \arccos c$
 
@@ -47,7 +49,7 @@ $||TC|| = \sin \alpha \cdot ||CP||$
 
 *Method B:*
 
-$||TP|| = CP \cdot \hat{RD}$
+$||TP|| = CP \cdot \hat{RD_f}$
 
 $||CP||^2 = ||TC||^2 + ||TP||^2$
 
@@ -79,20 +81,21 @@ $||P'P|| = \frac{||IP||}{\cos \beta}$
 
 $P' = P + \hat{RD} \cdot ||P'P||$
 
-And there we have it! An intersection point... Not really. Before wrapping this up we need to check for rays missing the cylinder and also take into account the cylinder caps. The first thing to note, is that all of this must be done in cylinder local space (or some assumptions won't work). We can start by discardind rays when $||TC|| > R$. 
+And there we have it! An intersection point... Not really. Before wrapping this up we need to check for rays missing the cylinder and also take into account the cylinder caps. The first thing to note is that all of this must be done in cylinder local space (or some assumptions won't work). We can start by discarding rays when $||TC|| > R$. 
 
-Before checking for the cylinder height, we are going to limit the ray direction y to be positve. 
-
-We have two cases:
-
-1) $P_y > \frac{H}{2}$ AND $\hat{RD}_y >= 0$ discard the ray.
-
-2) $P_y > \frac{H}{2}$ AND $\hat{RD}_y < 0$ we can't discard the ray, as it may be intersecting the cylinder cap.
-
+Before checking for the cylinder height, we are going to limit the ray direction y to be positve:
 
 ![](../../images/RayVSCylinder/fig4.png "Figure 4")
 
-$ \cos \omega = \hat{RD} \cdot -Y$
+$|{P'}_y| > \frac{H}{2}$
+
+$ A = |P_y| - \frac{H}{2}$
+
+$Y_d = (0,-1,0)  RD_y	\leqslant 0$
+
+$Y_d = (0,1,0)  RD_y	> 0$
+
+$ \cos \omega = \hat{RD} \cdot Y_d$
 
 $ \cos \omega = \frac{H}{D}$
 
@@ -100,6 +103,12 @@ $ D = \frac{H}{\cos \omega}$
 
 $ P' = P + \hat{RD} \cdot D$
 
+Finally, we need to check that $P'$ is within the cap:
+
+$\sqrt{{P'}_x^2 + {P'}_z^2} > R \Rightarrow discard.$
+
+
+And now we have an intersection point that takes into account the caps. I implemented the intersection code bellow using three.js:
 
 <div id="threeCanvas" style ="background-color:#FFF; width:720; height:480px; margin:0 auto;">
 <script src="/js/three.js"></script>
@@ -135,9 +144,10 @@ $ P' = P + \hat{RD} \cdot D$
 		camControls.enablePan = false;
 
 		// Helpers
-		var axisHelper = new THREE.AxesHelper(2);
+		var axisHelper = new THREE.AxesHelper(5);
+		axisHelper.position.y = 0.005;
 		scene.add(axisHelper);
-		var gridHelper = new THREE.GridHelper(10,10);
+		var gridHelper = new THREE.GridHelper(10,16,0xf0f0f0,0x606060);
 		scene.add(gridHelper);
 
 		// Materials
@@ -160,9 +170,38 @@ $ P' = P + \hat{RD} \cdot D$
 		var light = new THREE.AmbientLight( 0x202020 );
 		scene.add( light );
 
+		
 		drawIntersection(
-			new THREE.Vector3(0.3,1,3),
+			new THREE.Vector3(0.3,3,2),
 			new THREE.Vector3(-0.3,-0.8,-1),
+			cylinderRadius,
+			cylinderHeight
+		);
+
+		drawIntersection(
+			new THREE.Vector3(0.3,1.5,3),
+			new THREE.Vector3(0.2,-0.8,-1),
+			cylinderRadius,
+			cylinderHeight
+		);
+
+		drawIntersection(
+			new THREE.Vector3(0,-2,-3),
+			new THREE.Vector3(0.2,0.8,1),
+			cylinderRadius,
+			cylinderHeight
+		);
+
+		drawIntersection(
+			new THREE.Vector3(2,-2.5,0),
+			new THREE.Vector3(-1,0.7,0),
+			cylinderRadius,
+			cylinderHeight
+		);
+
+		drawIntersection(
+			new THREE.Vector3(-2.5,0.5,0.2),
+			new THREE.Vector3(1,0.4,0),
 			cylinderRadius,
 			cylinderHeight
 		);
@@ -174,7 +213,6 @@ $ P' = P + \hat{RD} \cdot D$
 		var arrow = new THREE.ArrowHelper(RD,P,1,0x00ffff);
 		scene.add(arrow);
 
-		// FIX1: we need to make this direction flat in y!!!
 		var RD2D = new THREE.Vector3();
 		RD2D.copy(RD);
 		RD2D.y = 0;
@@ -188,7 +226,13 @@ $ P' = P + \hat{RD} \cdot D$
 		var TP = CP.dot(RD2D);
 		var TC = Math.sqrt(CPLen*CPLen - TP*TP);
 
-		var TI = Math.sqrt(Math.max(Radius*Radius - TC*TC, 0));		
+		// Discard ray.
+		if(TC > Radius)
+		{
+			return;
+		}
+
+		var TI = Math.sqrt(Math.max(Radius*Radius - TC*TC, 0));
 		var IP = TP - TI;
 
 		// Debug 2D tests:
@@ -210,16 +254,43 @@ $ P' = P + \hat{RD} \cdot D$
 		var cosB = RD.dot(CPnorm);
 		var PpP = IP / cosB;
 
-		var interArrow = new THREE.ArrowHelper(RD,P,PpP,0x00ff00);
-		scene.add(interArrow);
+		var Pinter = new THREE.Vector3();
+		Pinter.copy(P);
+		Pinter.addScaledVector(RD,PpP);
+		
+		// Finally, we need to check for the cylinder height:
+		Pinter.y = Math.abs(Pinter.y); // Flip point y
 
-		// Debug final point
-		if(true)
+		var halfCylinderHeight = Height * 0.5;
+		if(Pinter.y > halfCylinderHeight)
 		{
-			var Pinter = new THREE.Vector3();
-			Pinter.copy(P);
-			Pinter.addScaledVector(RD,PpP);
-			console.log(Math.sqrt(Pinter.x*Pinter.x + Pinter.z*Pinter.z));
+			// Check if we hit the cylinder cap:
+			var YDir = new THREE.Vector3(0,-1,0);
+			if(RD.y > 0)
+			{
+				YDir = new THREE.Vector3(0,1,0);
+			}
+			var H = Math.abs(P.y) - halfCylinderHeight; // Flip y!
+			var cosw = RD.dot(YDir);
+			var D = H / cosw;
+
+			var Pcap = new THREE.Vector3();
+			Pcap.copy(P); // we now copy the original point
+			Pcap.addScaledVector(RD,D);// Also use original dir
+			var rad = Math.sqrt(Pcap.x*Pcap.x + Pcap.z*Pcap.z);
+			if(rad > Radius)
+			{
+				// Discard, ray misses the cap
+				return;
+			}
+				
+			var interArrow = new THREE.ArrowHelper(RD,P,D,0x00ff00);
+			scene.add(interArrow);
+		}
+		else
+		{
+			var interArrow = new THREE.ArrowHelper(RD,P,PpP,0x00ff00);
+			scene.add(interArrow);
 		}
 
 		/*
@@ -240,5 +311,8 @@ $ P' = P + \hat{RD} \cdot D$
 	}
 </script>
 </div>
+
+## Appendix:
+In this implementation I'm not taking into account rays starting inside the cylinder. Also, this could be extended to provide the second intersection point.
 
 

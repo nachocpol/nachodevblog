@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Nacho Dev Blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 26 Oct 2019 20:10:57 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 19 Feb 2020 20:57:45 +0000</lastBuildDate>
     
 	<atom:link href="http://nachodevblog.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>algebra</title>
+      <link>http://nachodevblog.com/tags/algebra/</link>
+      <pubDate>Wed, 19 Feb 2020 20:57:45 +0000</pubDate>
+      
+      <guid>http://nachodevblog.com/tags/algebra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>math</title>
+      <link>http://nachodevblog.com/tags/math/</link>
+      <pubDate>Wed, 19 Feb 2020 20:57:45 +0000</pubDate>
+      
+      <guid>http://nachodevblog.com/tags/math/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>rocketry</title>
