@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nachodevblog.com/posts/haack-series-generator-exporter/</loc>
+    <lastmod>2020-05-16T23:06:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nachodevblog.com/</loc>
+    <lastmod>2020-05-16T23:06:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nachodevblog.com/posts/</loc>
+    <lastmod>2020-05-16T23:06:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nachodevblog.com/tags/rocketry/</loc>
+    <lastmod>2020-05-16T23:06:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nachodevblog.com/tags/</loc>
+    <lastmod>2020-05-16T23:06:15+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nachodevblog.com/tags/algebra/</loc>
     <lastmod>2020-02-19T20:57:45+00:00</lastmod>
   </url>
@@ -13,32 +38,12 @@
   </url>
   
   <url>
-    <loc>https://nachodevblog.com/</loc>
-    <lastmod>2020-02-19T20:57:45+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nachodevblog.com/posts/</loc>
-    <lastmod>2020-02-19T20:57:45+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nachodevblog.com/posts/ray-cylinder-intersection/</loc>
     <lastmod>2020-02-19T20:57:45+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nachodevblog.com/tags/</loc>
-    <lastmod>2020-02-19T20:57:45+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nachodevblog.com/posts/haack-series-nose-generator/</loc>
-    <lastmod>2019-10-26T20:10:57+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nachodevblog.com/tags/rocketry/</loc>
     <lastmod>2019-10-26T20:10:57+01:00</lastmod>
   </url>
   

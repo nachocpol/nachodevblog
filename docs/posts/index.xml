@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Nacho Dev Blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Feb 2020 20:57:45 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2020 23:06:15 +0100</lastBuildDate>
     
 	<atom:link href="https://nachodevblog.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hack Series nose cone generator and exporter</title>
+      <link>https://nachodevblog.com/posts/haack-series-generator-exporter/</link>
+      <pubDate>Sat, 16 May 2020 23:06:15 +0100</pubDate>
+      
+      <guid>https://nachodevblog.com/posts/haack-series-generator-exporter/</guid>
+      <description>Settings  Haack Param:  0.33 Nose Length:  Nose Radius:  Number of Segments(vertical divisions):  256 Radii(horizontal divisions):  64 Generate shoulder
+Shoulder Length:  1.0 Shoulder Radius:  1.9     var renderer = new THREE.WebGLRenderer({ antialias: true }); renderer.setSize( window.innerWidth, window.innerHeight ); document.body.appendChild( renderer.domElement ); var scene = new THREE.Scene(); var camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 0.1, 100 ); camera.</description>
+    </item>
     
     <item>
       <title>Ray-Cylinder intersection</title>

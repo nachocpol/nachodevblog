@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>build on Nacho Dev Blog!</title>
+    <link>https://nachodevblog.com/tags/build/</link>
+    <description>Recent content in build on Nacho Dev Blog!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 22 Oct 2019 20:15:45 +0100</lastBuildDate>
+    
+	<atom:link href="https://nachodevblog.com/tags/build/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>One step forward</title>
+      <link>https://nachodevblog.com/posts/rocketry_upgrade/</link>
+      <pubDate>Tue, 22 Oct 2019 20:15:45 +0100</pubDate>
+      
+      <guid>https://nachodevblog.com/posts/rocketry_upgrade/</guid>
+      <description>Until this point, I have been launching model rockets using BP Estes motor packs. For those who don&#39;t know, in rocketry there are two principal types of motors:  Black Powder(BP): most common motors for low-mid rocketry. Propellant is black powder pellets, specific impulse of 80s. Single use. Ammonium perchlorate(AP): used in high power rocketry, can be either single use or reloadable. Specific impulse above 180s.   Specific impulse is a value that tells us how efficient a fuel is.</description>
+    </item>
+    
+  </channel>
+</rss>
