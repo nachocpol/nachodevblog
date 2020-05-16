@@ -10,6 +10,13 @@ externalLink = ""
 series = []
 +++
 
+After the initial research generating the 2D Haack nose cone, I finished the full 3D generator. This tool allows you to tweak and export the 3D as an .OBJ that you can import to your CAD package.
+
+As a test, I 3D printed this nose cone:
+
+![](../../images/Haack/3dprintresult.jpg "Results")
+
+
 <div>
 	<h2> Settings </h2>
 	<label>Haack Param: </label>
@@ -51,15 +58,20 @@ series = []
 	<input type="button" onclick="exportOBJ();" value="Export .OBJ">
 </div>
 
+<div id="threeCanvas" style ="background-color:#FFF; width:720; height:480px; margin:0 auto;">
 <script src="/js/three.js"></script>
 <script src="/js/OrbitControls.js"></script>
+
 <script>
+	var container = document.getElementById('threeCanvas');
+	var width = container.offsetWidth;
+	var height = container.offsetHeight;
 	var renderer = new THREE.WebGLRenderer({ antialias: true });
-	renderer.setSize( window.innerWidth, window.innerHeight );
-	document.body.appendChild( renderer.domElement );
+	renderer.setSize( width, height );
+	container.appendChild( renderer.domElement );
 
 	var scene = new THREE.Scene();
-	var camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 0.1, 100 );
+	var camera = new THREE.PerspectiveCamera( 90, width / height, 0.1, 100 );
 	camera.position.set(0,5,5);
 	var controls = new THREE.OrbitControls( camera, renderer.domElement);
 	controls.update();

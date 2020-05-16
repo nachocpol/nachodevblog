@@ -151,7 +151,13 @@
       </header>
 
       <div>
-        <div>
+        <p>After the initial research generating the 2D Haack nose cone, I finished the full 3D generator. This tool allows you to tweak and export the 3D as an .OBJ that you can import to your CAD package.</p>
+
+<p>As a test, I 3D printed this nose cone:</p>
+
+<p><img src="../../images/Haack/3dprintresult.jpg" alt="" title="Results" /></p>
+
+<div>
     <h2> Settings </h2>
     <label>Haack Param: </label>
     <input type="range" min="0.0" max="0.66" value="0.33" step="0.01" id="haackParamSlider" oninput="previewParam.value = haackParamSlider.value;">
@@ -192,15 +198,20 @@
     <input type="button" onclick="exportOBJ();" value="Export .OBJ">
 </div>
 
+<p><div id="threeCanvas" style ="background-color:#FFF; width:720; height:480px; margin:0 auto;">
 <script src="https://nachodevblog.com/js/three.js"></script>
-<script src="https://nachodevblog.com/js/OrbitControls.js"></script>
+<script src="https://nachodevblog.com/js/OrbitControls.js"></script></p>
+
 <script>
+    var container = document.getElementById('threeCanvas');
+    var width = container.offsetWidth;
+    var height = container.offsetHeight;
     var renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    document.body.appendChild( renderer.domElement );
+    renderer.setSize( width, height );
+    container.appendChild( renderer.domElement );
 
     var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 0.1, 100 );
+    var camera = new THREE.PerspectiveCamera( 90, width / height, 0.1, 100 );
     camera.position.set(0,5,5);
     var controls = new THREE.OrbitControls( camera, renderer.domElement);
     controls.update();
