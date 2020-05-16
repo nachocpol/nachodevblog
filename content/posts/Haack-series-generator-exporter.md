@@ -51,8 +51,8 @@ series = []
 	<input type="button" onclick="exportOBJ();" value="Export .OBJ">
 </div>
 
-<script src="../static/js/three.js"> </script>
-<script src="../static/js/OrbitControls.js"> </script>
+<script src="/js/three.js"></script>
+<script src="/js/OrbitControls.js"></script>
 <script>
 	var renderer = new THREE.WebGLRenderer({ antialias: true });
 	renderer.setSize( window.innerWidth, window.innerHeight );
