@@ -10,9 +10,9 @@ externalLink = ""
 series = []
 +++
 
-After the initial research generating the 2D Haack nose cone, I finished the full 3D generator. This tool allows you to tweak and export the 3D as an .OBJ that you can import to your CAD package.
+After the initial research generating the 2D Haack nose cone, I finished the full 3D generator. This tool allows you to tweak and export the nose cone as an OBJ.
 
-As a test, I 3D printed this nose cone:
+You can see the results of printing using the tool:
 
 ![](../../images/Haack/3dprintresult.jpg "Results")
 
@@ -42,7 +42,7 @@ As a test, I 3D printed this nose cone:
 	<output id="previewRadii">64</output>
 	<br>
 
-	<input type="checkbox" id="haackGenShoulder"> Generate shoulder<br>
+	Generate shoulder <input type="checkbox" id="haackGenShoulder"> <br>
 
 	<label>Shoulder Length: </label>
 	<input type="number" min="0" max="100.0" value="1.0" step="0.001" id="haackShoulderLength">
