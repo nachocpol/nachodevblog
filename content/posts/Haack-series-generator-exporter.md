@@ -10,58 +10,104 @@ externalLink = ""
 series = []
 +++
 
-After the initial research generating the 2D Haack nose cone, I finished the full 3D generator. This tool allows you to tweak and export the nose cone as an OBJ.
+After the initial research generating the <a href="{{< relref "Haack-series-nose-generator.md" >}}" target="_blank">2D Haack nose cone</a>, I finished the full 3D generator. This tool allows you to tweak and export the nose cone as an OBJ. The generator is unitless! So just be consistent with your CAD program units.
 
-You can see the results of printing using the tool:
 
-![](../../images/Haack/3dprintresult.jpg "Results")
-
+### Settings
 
 <div>
-	<h2> Settings </h2>
-	<label>Haack Param: </label>
-	<input type="range" min="0.0" max="0.66" value="0.33" step="0.01" id="haackParamSlider" oninput="previewParam.value = haackParamSlider.value;">
-	<output id="previewParam">0.33</output>
-	<br>
+	<table>
+	<tr>
+		<td>
+			<label>Haack Param </label>
+		</td>
+		<td>
+			<input type="range" min="0.0" max="0.66" value="0.33" step="0.01" id="haackParamSlider" oninput="previewParam.value = haackParamSlider.value;">
+			<output id="previewParam">0.33</output>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<label>Nose Length</label>
+		</td>
+		<td>
+			<input type="number" min="0.0" max="100.0" value="10.0" step="0.001" id="haackNoseLength">
+		</td>
+	</tr>
 
-	<label>Nose Length: </label>
-	<input type="number" min="0.0" max="100.0" value="10.0" step="0.001" id="haackNoseLength">
-	<br>
+	<tr>
+		<td>
+			<label>Nose Radius</label>
+		</td>
+		<td>
+			<input type="number" min="0" max="100.0" value="2.0" step="0.001" id="haackNoseRadius">
+		</td>
+	</tr>
 
-	<label>Nose Radius: </label>
-	<input type="number" min="0" max="100.0" value="2.0" step="0.001" id="haackNoseRadius">
-	<br>
+	<tr>
+		<td>
+			<label>Number of Segments(vertical divisions) </label>
+		</td>
+		<td>
+			<input type="range" min="2" max="256" value="256" step="1" id="haackNumerSegments" oninput="previewNumerSegments.value = haackNumerSegments.value;">
+			<output id="previewNumerSegments">256</output>
+		</td>
+	</tr>
 
-	<label>Number of Segments(vertical divisions): </label>
-	<input type="range" min="2" max="256" value="256" step="1" id="haackNumerSegments" oninput="previewNumerSegments.value = haackNumerSegments.value;">
-	<output id="previewNumerSegments">256</output>
-	<br>
+	<tr>
+		<td>
+			<label>Radii(horizontal divisions) </label>
+		</td>
+		<td>
+			<input type="range" min="3" max="64" value="64" step="1" id="haackRadii" oninput="previewRadii.value = haackRadii.value;">
+			<output id="previewRadii">64</output>
+		</td>
+	</tr>
 
-	<label>Radii(horizontal divisions): </label>
-	<input type="range" min="3" max="64" value="64" step="1" id="haackRadii" oninput="previewRadii.value = haackRadii.value;">
-	<output id="previewRadii">64</output>
-	<br>
+	<tr>
+		<td>
+			Generate shoulder
+		</td>
+		<td>
+			<input type="checkbox" id="haackGenShoulder">
+		</td>
+	</tr>
 
-	Generate shoulder <input type="checkbox" id="haackGenShoulder"> <br>
+	<tr>
+		<td>
+			<label>Shoulder Length </label>
+		</td>
+		<td>
+			<input type="number" min="0" max="100.0" value="1.0" step="0.001" id="haackShoulderLength">
+		</td>
+	</tr>
 
-	<label>Shoulder Length: </label>
-	<input type="number" min="0" max="100.0" value="1.0" step="0.001" id="haackShoulderLength">
-	<output id="previewShoulderLength">1.0</output>
-	<br>
-
-	<label>Shoulder Radius: </label>
-	<input type="number" min="0" max="100.0" value="1.9" step="0.001" id="haackShoulderRadius">
-	<output id="previewShoulderRadius">1.9</output>
-	<br>
-
-	<input type="button" onclick="haackRefreshValues();haackUpdate();" value="Update">
-	<input type="button" onclick="exportOBJ();" value="Export .OBJ">
+	<tr>
+		<td>
+			<label>Shoulder Radius </label>
+		</td>
+		<td>
+			<input type="number" min="0" max="100.0" value="1.9" step="0.001" id="haackShoulderRadius">
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<input type="button" onclick="haackRefreshValues();haackUpdate();" value="Update">
+			<input type="button" onclick="exportOBJ();" value="Export .OBJ">
+		</td>
+		<td>
+			
+		</td>
+	</tr>
+	</table>
+	<br><br>
 </div>
 
 <div id="threeCanvas" style ="background-color:#FFF; width:720; height:480px; margin:0 auto;">
 <script src="/js/three.js"></script>
 <script src="/js/OrbitControls.js"></script>
-
 <script>
 	var container = document.getElementById('threeCanvas');
 	var width = container.offsetWidth;
@@ -326,5 +372,21 @@ You can see the results of printing using the tool:
 
 		renderer.render(scene,camera);	
 	};
-
 </script>
+</div>
+
+#### Releases
+**17 May 2020**
+
+* Initial release
+
+
+<br>
+
+To test this, I 3D printed a nose cone using this tool:
+
+![](../../images/Haack/3dprintresult.jpg "Results")
+
+
+Let me know if you find any issues!
+Thanks.
