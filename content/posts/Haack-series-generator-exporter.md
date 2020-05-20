@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2020-05-16T23:06:15+01:00
-title = "Hack Series nose cone generator and exporter"
+title = "Haack Series nose cone generator and exporter"
 description = "Generator that allows you to customize the nose cone settings and then export it as an OBJ"
 slug = "" 
 tags = ["rocketry"]
