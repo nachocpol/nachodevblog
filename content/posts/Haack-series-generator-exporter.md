@@ -117,13 +117,13 @@ After the initial research generating the <a href="{{< relref "Haack-series-nose
 	container.appendChild( renderer.domElement );
 
 	var scene = new THREE.Scene();
-	var camera = new THREE.PerspectiveCamera( 90, width / height, 0.1, 100 );
+	var camera = new THREE.PerspectiveCamera( 90, width / height, 0.2, 1000 );
 	camera.position.set(0,5,5);
 	var controls = new THREE.OrbitControls( camera, renderer.domElement);
 	controls.update();
 	controls.enablePan = false;
 	controls.minDistance = 5.0;
-	controls.maxDistance = 100.0;
+	controls.maxDistance = 1000.0;
 
 	var axesHelper = new THREE.AxesHelper( 25 );
 	axesHelper.position.y = 0.05;
@@ -379,6 +379,10 @@ After the initial research generating the <a href="{{< relref "Haack-series-nose
 **17 May 2020**
 
 * Initial release
+
+**24 May 2020**
+
+* Increased max camera distance
 
 
 <br>

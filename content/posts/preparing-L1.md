@@ -22,20 +22,18 @@ This is the first certification level required for using motors above H up to I 
 Also, I must pass with at least 90% a multi-choice exam.
 
 ## Choice of motor
-H163 29mm Cesaroni 3-Grain (White Thunder),up to 14sec delay, 1.0s. burn time, 159N/s avg thrust, 216.9 max thrust, 187mm length
 
-Before the certification flight I want to test the rocket with a smaller motor to make sure everything works as expected. A good candidate would be:
+For this flight, I'll use a reloadable AP motor. To be more precise, a Cesaroni Pro29 3 grains. 
 
-F31 29mm Cesaroni 1-Grain, up to 12sec delay, 1.8s. burn time, 55N/s avg thrust, 65.9 max thrust, 98mm length
+This is new for me, as I've only used single use BP motors.
 
-I have never use AP motors, so testing with a smaller motor is a requirement.
+Several components make up this configuration:
 
-
-Consideration time! 
-This configuration with a 57mm airframe can go up to 900m... Also, the acceleration on the motor is crazy nuts.
-
-Another option would be to use a 38mm motor instead!
-
++ Motor case: http://www.pro38.com/pdfs/Pro29_dimensions.pdf
++ Motor tube: https://locprecision.com/product/motor-mount-tubing/
++ Motor retainer
++ Reload
++ Aft closure 
 
 ## The rocket
 
