@@ -18,10 +18,4 @@ If I had to list my top movies that would be: Gladiator, Interstellar, 2001: spa
 I studied Games Programming in Valencia, Spain and then came to the UK to finish my BSc. During the last year of my studies, I focused mainly in graphics. After this, I started working at Simul Software, there I worked with TrueSky, a volumetric cloud rendering plugin for games. I implemented the DX12, OpenGL and Switch rendering back-ends. To support this I extended our in-house shader cross-compiler. After Simul, I moved to Wilmslow to start workign as Junior Render Tech Programmer at TT Games (where I work at this moment). Some things I implemented include: tessellation support, histogram exposure, memory profiling tools, probes...
 {{%format/text-align-justify%}}
 
-
-If you want to reach out, you can use any of the methods bellow:
-
-* **Phone:** (+34)617 28 15 06
-* **E-mail:** nachocpol@gmail.com
-
 ![](../images/PicosDeEuropaPro.jpg "Wop Wop")
