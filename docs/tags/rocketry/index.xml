@@ -6,10 +6,19 @@
     <description>Recent content in rocketry on Nacho Dev Blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 16 May 2020 23:06:15 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2020 12:34:39 +0100</lastBuildDate>
     
 	<atom:link href="https://nachodevblog.com/tags/rocketry/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rocket nozzle equations - Throat area</title>
+      <link>https://nachodevblog.com/posts/rocket-nozzle-equations-throat-area/</link>
+      <pubDate>Sun, 02 Aug 2020 12:34:39 +0100</pubDate>
+      
+      <guid>https://nachodevblog.com/posts/rocket-nozzle-equations-throat-area/</guid>
+      <description>As a rocketry enthusiast, I find it fascinating how rocket engine nozzles work. A while back, I got my hands on a copy of Rocket Propulsion Elements, an in-depth technical book that goes over the ins and outs of rocket propulsion! Chapter 3 focuses on how a nozzle converts the high-pressure low-velocity combustion gases, into a low-pressure fast stream of gas. The fast stream of gases leaving the nozzle is what generates thrust, according to Newton&#39;s third law: for every acting force, there is an opposite force of equal magnitude acting in the opposite direction.</description>
+    </item>
     
     <item>
       <title>Haack Series nose cone generator and exporter</title>

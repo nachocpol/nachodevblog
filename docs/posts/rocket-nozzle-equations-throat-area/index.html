@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Nacho Cortizo Pol">
+    
+    <meta name="keywords" content="blog,developer,graphics,programming">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Rocket nozzle equations - Throat area"/>
+<meta name="twitter:description" content="As a rocketry enthusiast, I find it fascinating how rocket engine nozzles work. A while back, I got my hands on a copy of Rocket Propulsion Elements, an in-depth technical book that goes over the ins and outs of rocket propulsion! Chapter 3 focuses on how a nozzle converts the high-pressure low-velocity combustion gases, into a low-pressure fast stream of gas. The fast stream of gases leaving the nozzle is what generates thrust, according to Newton&#39;s third law: for every acting force, there is an opposite force of equal magnitude acting in the opposite direction."/>
+
+    <meta property="og:title" content="Rocket nozzle equations - Throat area" />
+<meta property="og:description" content="As a rocketry enthusiast, I find it fascinating how rocket engine nozzles work. A while back, I got my hands on a copy of Rocket Propulsion Elements, an in-depth technical book that goes over the ins and outs of rocket propulsion! Chapter 3 focuses on how a nozzle converts the high-pressure low-velocity combustion gases, into a low-pressure fast stream of gas. The fast stream of gases leaving the nozzle is what generates thrust, according to Newton&#39;s third law: for every acting force, there is an opposite force of equal magnitude acting in the opposite direction." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nachodevblog.com/posts/rocket-nozzle-equations-throat-area/" />
+<meta property="article:published_time" content="2020-08-02T12:34:39+01:00" />
+<meta property="article:modified_time" content="2020-08-02T12:34:39+01:00" />
+
+
+    
+      <base href="https://nachodevblog.com/posts/rocket-nozzle-equations-throat-area/">
+    
+    <title>
+  Rocket nozzle equations - Throat area · Nacho Dev Blog!
+</title>
+
+    
+      <link rel="canonical" href="https://nachodevblog.com/posts/rocket-nozzle-equations-throat-area/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://nachodevblog.com/css/coder.min.28d751104f30c16da1aa1bb04015cbe662cacfe0d1b01af4f2240ad58580069c.css" integrity="sha256-KNdREE8wwW2hqhuwQBXL5mLKz&#43;DRsBr08iQK1YWABpw=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://nachodevblog.com/css/custom.css" />
+    
+
+    
+    
+    <link rel="icon" type="image/png" href="https://nachodevblog.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://nachodevblog.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.58.3" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://nachodevblog.com/">
+      Nacho Dev Blog!
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://nachodevblog.com/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://nachodevblog.com/projects/">Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://nachodevblog.com/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://nachodevblog.com/files/Resum%C3%A9.pdf">Resumé</a>
+          </li>
+        
+      
+      
+    </ul>
+  </section>
+</nav>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Rocket nozzle equations - Throat area</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-08-02T12:34:39&#43;01:00'>
+                August 2, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              2 minutes read
+            </span>
+          </div>
+          
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://nachodevblog.com/tags/rocketry/">rocketry</a>
+      <span class="separator">•</span>
+    <a href="https://nachodevblog.com/tags/math/">math</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+
+<p style="text-align: justify;">
+	
+As a rocketry enthusiast, I find it fascinating how rocket engine nozzles work. A while back, I got my hands on a copy of <a href="http://mae-nas.eng.usu.edu/MAE_5540_Web/propulsion_systems/subpages/Rocket_Propulsion_Elements.pdf" target="_blank">Rocket Propulsion Elements</a>, an in-depth technical book that goes over the ins and outs of rocket propulsion! Chapter 3 focuses on how a nozzle converts the high-pressure low-velocity combustion gases, into a low-pressure fast stream of gas. The fast stream of gases leaving the nozzle is what generates thrust, according to Newton's third law: for every acting force, there is an opposite force of equal magnitude acting in the opposite direction.
+
+</p>
+
+<p><p style="text-align: justify;">
+	
+The following picture (courtesy of Rocket Propulsion Elements) shows how the pressure and velocity changes along the nozzle. I will use the same nomenclature in my functions bellow i.e. chamber pressure is $p_1$, velocity at the throat is $v_t$ and so on.
+
+</p>
+<img src="../../images/Nozzle/nozzle_diagram.png" alt="" title="Nozzle diagram" /></p>
+
+<p style="text-align: justify;">
+	
+After reading this chapter a few times, I decided to validate my knowledge with some real world example, I chose the mighty Rocketdyne F1 engine:
+
+</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Chamber pressure</td>
+<td>6.8 MPa</td>
+</tr>
+
+<tr>
+<td>RP1 Flow rate</td>
+<td>788 kg/s</td>
+</tr>
+
+<tr>
+<td>LOX</td>
+<td>788 kg/s</td>
+</tr>
+
+<tr>
+<td>Combustion temperature</td>
+<td>3670 K</td>
+</tr>
+
+<tr>
+<td>Specific heat</td>
+<td>1.24</td>
+</tr>
+
+<tr>
+<td>Molecular mass exhaust gases</td>
+<td>23.3 g/mol</td>
+</tr>
+</tbody>
+</table>
+
+<p>Armed with this information, I wanted to figure out the area of the throat $A_t$.</p>
+
+<p>$A_t = \frac{\dot{m} V_t}{v_t}$</p>
+
+<p>From the table above, we know  that $\mathbf{\dot{m} = 2577 kg/s}$. We need to figure out the specific volume $V_t$ and gas velocity $v_t$. Let&rsquo;s start by figuring out the velocity at the throat:</p>
+
+<p>$v_t = \sqrt{KRT_t}$</p>
+
+<p>$R= \frac{{R}&lsquo;}{\mathfrak{M}} = \frac{8.31}{0.023}=\mathbf{361.3}$</p>
+
+<p>${R}&lsquo;$ is the ideal gas constant ($8.31$).  $\mathfrak{M}$ is the molecular mass of the exhaust gases ($\mathbf{\mathfrak{M} = 0.023\text{ kg/mol}}$).</p>
+
+<p>$T_t=\frac{2T_1}{K+1}=\frac{2\cdot3670}{1.24+1}=\mathbf{3276.8\text{ K}}$</p>
+
+<p>$v_t = \sqrt{1.24\cdot361.3\cdot3276.8}=\mathbf{1211.6\text{ m/s}}$</p>
+
+<p>Now, lets find the specific volume:</p>
+
+<p>$V_t = V_1\left(\frac{p_1}{p_t}\right)^\frac{1}{K}$</p>
+
+<p>$V_1=\frac{RT_1}{p_1}=\frac{361.3\cdot3670}{6771000}=\mathbf{0.19 m^{3}/kg}$</p>
+
+<p>$\frac{p_t}{p_1}=\left(\frac{2}{K+1}\right)^\frac{K}{K-1} \Rightarrow p_t=\left(\frac{2}{K+1}\right)^\frac{K}{K-1}p_1=\left(\frac{2}{1.24+1}\right)^\frac{1.24}{1.24-1}\cdot6.8=\mathbf{3.78\text{ MPa}}$</p>
+
+<p>$V_t = 0.19\cdot\left(\frac{6.8}{3.78}\right)^\frac{1}{1.24}=\mathbf{0.3 m^{3}/kg}$</p>
+
+<p>And finally we can solve for $A_t$:</p>
+
+<p>$A_t = \frac{2577\cdot0.3}{1211.6}=\mathbf{0.63m^2}$</p>
+
+<p>To  verify this result we can look at the data availiable for the F1. $\frac{A_2}{A_t}=16$ and $D_2=3.47\text{m}$. We can solve the exit area as: $A_2=\Pi{r}^2=\Pi\cdot{1.73}^2=9.45m^2$. And finally, $A_t = \frac{A_2}{16}=\mathbf{0.59m^2}$</p>
+
+<h4 id="conclusion">Conclusion</h4>
+
+<p>I&rsquo;m really happy with the results, even if its not the exact value from the refence, is within 0.04 units! I would say that this difference comes from the number of decimals used in my math and also the uncertainty of some of the characteristics, as sources show different values.</p>
+
+<h4 id="references">References</h4>
+
+<p><a href="http://www.astronautix.com/l/loxkerosene.html">http://www.astronautix.com/l/loxkerosene.html</a></p>
+
+<p><a href="https://link.springer.com/chapter/10.1007%2F978-0-387-09630-8_4">https://link.springer.com/chapter/10.1007%2F978-0-387-09630-8_4</a></p>
+
+<p><a href="https://en.wikipedia.org/wiki/Rocketdyne_F-1">https://en.wikipedia.org/wiki/Rocketdyne_F-1</a></p>
+
+      </div>
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nachodevblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+     © 2020 nachocpol@gmail.com 
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>
