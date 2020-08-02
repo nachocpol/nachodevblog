@@ -15,7 +15,7 @@ If I had to list my top movies that would be: Gladiator, Interstellar, 2001: spa
 {{%format/text-align-justify%}}
 
 {{%format/text-align-justify%}}
-I studied Games Programming in Valencia, Spain and then came to the UK to finish my BSc. During the last year of my studies, I focused mainly in graphics. After this, I started working at Simul Software, there I worked with TrueSky, a volumetric cloud rendering plugin for games. I implemented the DX12, OpenGL and Switch rendering back-ends. To support this I extended our in-house shader cross-compiler. After Simul, I moved to Wilmslow to start workign as Junior Render Tech Programmer at TT Games (where I work at this moment). Some things I implemented include: tessellation support, histogram exposure, memory profiling tools, probes...
+I studied Games Programming in Valencia, Spain and then came to the UK to finish my BSc. During the last year of my studies, I focused mainly in graphics. My first job was at Simul Software, from there, I moved to TT games, where I worked on the new Star Wars game. I'm currently working at Playground Games on Fable!
 {{%format/text-align-justify%}}
 
 ![](../images/PicosDeEuropaPro.jpg "Wop Wop")
