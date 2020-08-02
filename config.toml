@@ -40,7 +40,7 @@ disqusShortname = "nachodevblog"
     name = "Github"
     icon = "fab fa-github fa-2x"
     weight = 1
-    url = "https://github.com/piluve"
+    url = "https://github.com/nachocpol"
 [[params.social]]
     name = "Gitlab"
     icon = "fab fa-linkedin fa-2x"
