@@ -23,7 +23,7 @@ After reading this chapter a few times, I decided to validate my knowledge with 
 |                              |             |
 |------------------------------|-------------|
 | Chamber pressure             | 6\.8 MPa    |
-| RP1 Flow rate                | 788 kg/s    |
+| RP1 Flow rate                | 1789 kg/s   |
 | LOX                          | 788 kg/s    |
 | Combustion temperature       | 3670 K      |
 | Specific heat                | 1\.24       |
@@ -51,7 +51,7 @@ $V_t = V_1\left(\frac{p_1}{p_t}\right)^\frac{1}{K}$
 
 $V_1=\frac{RT_1}{p_1}=\frac{361.3\cdot3670}{6771000}=\mathbf{0.19 m^{3}/kg}$
 
-$\frac{p_t}{p_1}=\left(\frac{2}{K+1}\right)^\frac{K}{K-1} \Rightarrow p_t=\left(\frac{2}{K+1}\right)^\frac{K}{K-1}p_1=\left(\frac{2}{1.24+1}\right)^\frac{1.24}{1.24-1}\cdot6.8=\mathbf{3.78\text{ MPa}}$
+$\frac{p_t}{p_1}=\left(\frac{2}{K+1}\right)^\frac{K}{K-1} \Rightarrow p_t=\left(\frac{2}{K+1}\right)^\frac{K}{K-1}p_t=\left(\frac{2}{1.24+1}\right)^\frac{1.24}{1.24-1}\cdot6.8=\mathbf{3.78\text{ MPa}}$
 
 $V_t = 0.19\cdot\left(\frac{6.8}{3.78}\right)^\frac{1}{1.24}=\mathbf{0.3 m^{3}/kg}$
 
