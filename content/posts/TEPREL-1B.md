@@ -86,9 +86,9 @@ And these are the final stats:
 - **Specific impulse**: 235s
 - **Mass flow rate**: 13kg/s
 - **Exhaust velocity**: 2242m/s
-- **Chamber presure**: 1.38MPa
+- **Chamber pressure**: 1.38MPa
 - **Throat diameter**: 19cm
-- **Nozzle exit diamter**: 31cm
+- **Nozzle exit diameter**: 31cm
 
 #### References
 
