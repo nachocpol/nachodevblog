@@ -74,7 +74,7 @@ Now, lets get the area at the throat:
 
 $A_t = \frac{\dot{m}}{P_1}\frac{RT_1}{k\left({\frac{2}{k+1}}\right)^{\frac{k+1}{k-1}}} = \mathbf{0.028m^2}$
 
-$A_2 = A_t \cdot{0.37} = \mathbf{0.075m^2}$
+$A_2 = \frac{A_t}{0.37} = \mathbf{0.075m^2}$
 
 And if we convert this to a diameter we get that $D_t = \mathbf{18.8cm}$ and $D_2 = \mathbf{30.9cm}$
 
