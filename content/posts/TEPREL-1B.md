@@ -42,13 +42,13 @@ Also, note that the stored oxidiser to fuel ratio is $2.32$, a common value for 
 
 By having the rocket thrust and mass flow rate, we can figure out the velocity of the exhaust:
 
-$F = \dot{m} V_{e}$
+$F = \dot{m} v_{e}$
 
-$V_{e} = \frac{F}{\dot{m}}$
+$v_{e} = \frac{F}{\dot{m}}$
 
-$V_{e} = \frac{30000}{13.38} = 2242.15 \text{m/s}$
+$v_{e} = \frac{30000}{13.38} = 2242.15 \text{m/s}$
  
-Having this we can also figure out the specific impulse (this is at sea level): $I_{SP}=\frac{V_e}{g_0} = \frac{2241.15}{9.81} = 235s$ 
+Having this we can also figure out the specific impulse (this is at sea level): $I_{SP}=\frac{v_e}{g_0} = \frac{2241.15}{9.81} = 235s$ 
 
 #### Chamber pressure
 
