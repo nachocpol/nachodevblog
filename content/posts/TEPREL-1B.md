@@ -8,7 +8,7 @@ tags = ["rocketry","engine","math"]
 
 ![TEPREL-B Hot test](https://pbs.twimg.com/media/Egw3QCEWoAAabtR?format=jpg&name=large)
 
-TEPREL-1B is a liquid bi-propellant rocket engine developed by PLD Space, a Spanish company working towards a slot in the micro satellite launchers. This engine will be used in MIURA-1 a suborbital vehicle that will be able to carry a 100kg payload to 153km and also serve as a test bed for several technologies. The availiable specs of the engine are as follows:
+TEPREL-1B is a liquid bi-propellant rocket engine developed by PLD Space, a Spanish company working towards a slot in the micro satellite launchers. This engine will be used in MIURA-1 a suborbital vehicle that will be able to carry a 100kg payload to 153km and also serve as a testbed for several technologies. The available specs of the engine are as follows:
 
 - **Propellants**: Liquid oxigen (LOX) & Rocket grade kerosne (RP1)
 - **Engine cycle**: Pressure-fed  (helium as pressurant)
@@ -20,7 +20,7 @@ On top of this, we also know that the vehicle carries **1000l of LOX** and **600
 
 ## Extended specs
 
-Lets figure out additional spects of this engine! Most of the equations that I use here come or are derived from **Rocket Propulsion Elements** [3], an excelent book that goes over the ins and outs of rocket propulsion. Take all this results with a grain of salt, real values may be different from these results.
+Lets figure out additional specs of this engine! Most of the equations that I use here come or are derived from **Rocket Propulsion Elements** [3], an excellent book that goes over the ins and outs of rocket propulsion. Take all these results with a grain of salt, real values may be different from these results.
 
 #### Mass flow rate
 
@@ -56,7 +56,7 @@ To get the chamber pressure we can start with the exhaust velocity formula:
 
 $v_e = \sqrt{\frac{2k}{k-1} RT_1 \left({1-\left({\frac{p_y}{p_1}}\right)^\frac{k-1}{k}}\right)}$
 
-Where $v_e$ is the exhaust velocity we calculated above. $R$ is the gas constant. $T_1$ temperature at the combustion chamber and $p_y$ the exit pressure (for sea level, it would be 0.101MPa[5]).  We can re-arange the equation to solve for $p_1$:
+Where $v_e$ is the exhaust velocity we calculated above. $R$ is the gas constant. $T_1$ temperature at the combustion chamber and $p_y$ the exit pressure (for sea level, it would be 0.101MPa[5]).  We can re-arrange the equation to solve for $p_1$:
 
 $\frac{{v_2}^2}{\frac{2k}{k-1}RT_1} = 1 - \left({{\frac{p_y}{p_1}}}\right)^{\frac{k-1}{k}}$
 
